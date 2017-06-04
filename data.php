@@ -7,6 +7,7 @@
         $game = $_POST['game'];
         $case = $_POST['case'];
         $yesno = $_POST['yesno'];
+        $age = $_POST['age'];
         //***** Creer un fichier 'txt' avec speudo comme nom et dans une variable
         $monfichier = fopen('compte/' . $_POST['speudo']. '.txt', 'w');
         //***** Colle les elements du formulaire
@@ -15,6 +16,7 @@
         fputs($monfichier, $game);
         fputs($monfichier, $case);
         fputs($monfichier, $yesno);
+        fputs($monfichier, $age);
         //***** on tente de creer un objet
         //***** On referme le ficheier apres son utilisation
         fclose($monfichier);
