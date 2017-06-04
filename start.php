@@ -7,12 +7,31 @@
     <title>Start</title>
 </head>
 <body>
-    <form>
-        <input type="text" action="data.php" name ="speudo">
+    <form action="data.php" method="POST">
+        
+        <input type="text" name ="speudo" placeholder="Speudo">
+        <input type="password" name="mot_de_passe" placeholder="Password" />
+
+        <textarea name="message" rows="5" cols="35" placeholder="Saisie du paragraphe"></textarea>
+
+        <select name="game">
+            <option value="OverWatch">OverWatch</option>
+            <option value="LeagueOfLegend">LeagueOfLegend</option>
+            <option value="Hearthstone">HearthStone</option>
+            <option value="Diablo3">Diablo*RiP*</option>
+        </select>
+        
+            <input type="checkbox" name="case" /><label for="case">Clavier/Souris</label>
+            <input type="checkbox" name="case" /><label for="case">Manette</label>
+            <input type="checkbox" name="case" /><label for="case">Gestuel</label>
+            <input type="checkbox" name="case" /><label for="case">Tactil</label>
+       
+            <input type="radio" name="yesno" value="oui" id="oui" checked="checked" /><label for="oui">Oui</label>
+            <input type="radio" name="yesno" value="non" id="non" /><label for="non">Non</label>
+
         <input type="submit" name="btn" value="Submit"></input>
+
     </form>
-    <?php 
-    
-    ?>
+    <?php ?>
 </body>
 </html>
