@@ -10,12 +10,12 @@
 <body>
     <form action="data.php" method="POST">
         
-        <input type="text" name ="speudo" placeholder="Speudo">
-        <input type="password" name="mot_de_passe" placeholder="Password" />
-        <input type="number" name="age" placeholder="Age" />
-        <textarea name="message" rows="5" cols="35" placeholder="Saisie du paragraphe"></textarea>
+        <input type="text" name ="speudo" placeholder="Speudo" class="bar">
+        <input type="password" name="mot_de_passe" placeholder="Password" class="bar"/>
+        <input type="number" name="age" placeholder="Age" class="bar"/>
+        <textarea name="message" rows="5" cols="35" placeholder="Saisie du paragraphe" class="bar"></textarea>
 
-        <select name="game">
+        <select name="game" class="point">
             <option value=”” disabled selected>Choose a Game</option>
             <option value="OverWatch">OverWatch</option>
             <option value="LeagueOfLegend">LeagueOfLegend</option>
@@ -23,15 +23,15 @@
             <option value="Diablo3">Diablo*RiP*</option>
         </select>
         
-            <input type="checkbox" name="case" /><label for="case">Clavier/Souris</label>
-            <input type="checkbox" name="case" /><label for="case">Manette</label>
-            <input type="checkbox" name="case" /><label for="case">Gestuel</label>
-            <input type="checkbox" name="case" /><label for="case">Tactil</label>
+            <input type="checkbox" name="case" class="point"/><label for="case">Clavier/Souris</label>
+            <input type="checkbox" name="case" class="point"/><label for="case">Manette</label>
+            <input type="checkbox" name="case" class="point"/><label for="case">Gestuel</label>
+            <input type="checkbox" name="case" class="point"/><label for="case">Tactil</label>
        
-            <input type="radio" name="yesno" value="oui" id="oui" checked="checked" /><label for="oui">Oui</label>
-            <input type="radio" name="yesno" value="non" id="non" /><label for="non">Non</label>
+            <input type="radio" name="yesno" value="oui" id="oui" class="point"/><label for="oui">Oui</label>
+            <input type="radio" name="yesno" value="non" id="non" class="point"/><label for="non">Non</label>
 
-        <input type="submit" name="btn" value="Submit"></input>
+        <input type="submit" name="btn" value="Submit" class="point"></input>
 
     </form>
     <?php ?>
