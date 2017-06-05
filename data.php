@@ -20,7 +20,7 @@
         //***** on tente de creer un objet
         //***** On referme le ficheier apres son utilisation
         fclose($monfichier);
-        //***** Sinon message 'lost'
+    //***** Sinon password mauvais/pas rentrer message 'lost'
     }else{
         echo 'LOST';
     };
