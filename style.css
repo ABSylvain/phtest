@@ -37,3 +37,14 @@ input {
 textarea {
     margin-bottom: 5px;
 }
+
+#op {
+    width: 60%;
+    height: 15em;
+    background-color: white;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+}

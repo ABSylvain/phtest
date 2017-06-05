@@ -1,4 +1,20 @@
-<?php 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="op">
+        <h3>Votre compte a bien été creer/modifier.</h3>
+        <h5>Cliquer sur ce bouton pour retourner a la liste.</h5>
+        <a href="index.php">Retour</a>
+    </div>
+     
+    <?php 
     //***** Pour le password
     if(isset($_POST['mot_de_passe']) && $_POST['mot_de_passe'] ==  "bob") {
         //***** On chope les elments du formulaire
@@ -11,7 +27,7 @@
         //***** Creer un fichier 'txt' avec speudo comme nom et dans une variable
         $monfichier = fopen('compte/' . $_POST['speudo']. '.php', 'w');
         //***** Colle les elements du formulaire
-        fputs($monfichier, '<form action=".php" method="POST">
+        fputs($monfichier, '<form action="../data.php" method="POST">
                                     <input type="text" name ="speudo" placeholder="'.$speudo.'" class="bar">
                                     <input type="password" name="mot_de_passe" placeholder="Password" class="bar"/>
                                     <input type="number" name="age" placeholder="'.$age.'" class="bar"/>
@@ -49,6 +65,8 @@
         fclose($monfichier);
     //***** Sinon password mauvais/pas rentrer message 'lost'
     }else{
-        echo 'LOST';
+    
     };
 ?>
+</body>
+</html>

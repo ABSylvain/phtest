@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Index</title>
 </head>
 <body>
@@ -23,6 +24,7 @@
             //***** si opendir n'as pas marcher
             }else
                 echo 'Le dossier n\' a pas pu être ouvert';
+                
      ?>
 </body>
 </html>
