@@ -28,11 +28,8 @@
         $monfichier = fopen('compte/' . $_POST['speudo']. '.php', 'w');
         //***** Colle les elements du formulaire (copi/colle le formulaire d'origine 
         //***** avec les variable de recu du POST)
-        fputs($monfichier, 
-                            //***** On creer un lien pour le CSS
-                            '<link rel="stylesheet" type="text/css" href="../style.css" />'
-                            //***** Changer le chemin pour sortir du dossier 
-                            '<form action="../data.php" method="POST">
+        fputs($monfichier, '<link rel="stylesheet" type="text/css" href="../style.css" /> 
+                            <form action="../data.php" method="POST">
                                     <input type="text" name ="speudo" placeholder="'.$speudo.'" class="bar">
                                     <input type="password" name="mot_de_passe" placeholder="Password" class="bar"/>
                                     <input type="number" name="age" placeholder="'.$age.'" class="bar"/>
