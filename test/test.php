@@ -9,20 +9,13 @@
 </head>
 
 <body>
-    <form action="index.php" method="post">
+    <form action="php.php" method="post">
         <input type="checkbox" name="prenom[]" value="adriana" />Adriana<br>
         <input type="checkbox" name="prenom[]" value="alessandra" />Alessandra<br>
         <input type="checkbox" name="prenom[]" value="candice" />Candice<br>
         <input type="checkbox" name="prenom[]" value="lili" />Lili<br>
         <input type="submit" value="Envoyer" />
     </form>
-    <?php
-
-    foreach($_POST['prenom'] as $valeur)
-{
-   echo "La checkbox $valeur a été cochée<br>";
-}
-?>
 </body>
 
 </html>

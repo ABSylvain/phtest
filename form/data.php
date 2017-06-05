@@ -11,6 +11,7 @@
     <div id="op">
         <h3>Votre compte a bien été creer/modifier.</h3>
         <h5>Cliquer sur ce bouton pour retourner a la liste.</h5>
+        <?php echo $value ?>
         <a href="index.php">Retour</a>
     </div>
      
@@ -21,7 +22,11 @@
         $speudo = $_POST['speudo'];
         $message = $_POST['message'];
         $game = $_POST['game'];
-        $case = $_POST['case'];
+        $case = [];
+        foreach ($_POST['case'] as $value)
+            {
+              $case = $value;
+            }
         $yesno = $_POST['yesno'];
         $age = $_POST['age'];
         //***** Creer un fichier 'txt' avec speudo comme nom et dans une variable
@@ -42,7 +47,8 @@
                                         <option value="Hearthstone">HearthStone</option>
                                         <option value="Diablo3">Diablo*RiP*</option>
                                     </select>
-        
+                                    
+                                    <p id="choix">L\' ancien choix : '.$case.'</p>
                                     <input type="checkbox" name="case" class="point"/><label for="case">Clavier/Souris</label>
                                     <input type="checkbox" name="case" class="point"/><label for="case">Manette</label>
                                     <input type="checkbox" name="case" class="point"/><label for="case">Gestuel</label>
@@ -70,5 +76,11 @@
     
     };
 ?>
+<div id="op">
+        <h3>Votre compte a bien été creer/modifier.</h3>
+        <h5>Cliquer sur ce bouton pour retourner a la liste.</h5>
+        <?php echo $case ?>
+        <a href="index.php">Retour</a>
+    </div>
 </body>
 </html>

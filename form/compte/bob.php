@@ -1,11 +1,9 @@
-//***** On creer un lien pour le CSS
-                            <link rel="stylesheet" type="text/css" href="../style.css" />
-                            //***** Changer le chemin pour sortir du dossier 
+<link rel="stylesheet" type="text/css" href="../style.css" /> 
                             <form action="../data.php" method="POST">
-                                    <input type="text" name ="speudo" placeholder="itsise" class="bar">
+                                    <input type="text" name ="speudo" placeholder="bob" class="bar">
                                     <input type="password" name="mot_de_passe" placeholder="Password" class="bar"/>
-                                    <input type="number" name="age" placeholder="54" class="bar"/>
-                                    <textarea name="message" rows="5" cols="35" placeholder="djeiozdqksdmcSDQSDQdcf" class="bar"></textarea>
+                                    <input type="number" name="age" placeholder="34" class="bar"/>
+                                    <textarea name="message" rows="5" cols="35" placeholder="guhlqknd" class="bar"></textarea>
 
                                     <select name="game" class="point">
                                         <option value=”” disabled selected>Hearthstone</option>
@@ -14,7 +12,8 @@
                                         <option value="Hearthstone">HearthStone</option>
                                         <option value="Diablo3">Diablo*RiP*</option>
                                     </select>
-        
+                                    
+                                    <p id="choix">L' ancien choix : Array</p>
                                     <input type="checkbox" name="case" class="point"/><label for="case">Clavier/Souris</label>
                                     <input type="checkbox" name="case" class="point"/><label for="case">Manette</label>
                                     <input type="checkbox" name="case" class="point"/><label for="case">Gestuel</label>
