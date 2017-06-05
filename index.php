@@ -14,7 +14,7 @@
             //***** On parcours les fichier du dossier, chaque iteration iras dans $fichier
             while(false !== ($fichier = readdir($folder))){
                 //***** A chaque fichier on verifi que sa ne soi pas un fichier indesirable 
-                if($fichier != '.' && $fichier != '..'&& $fichier != '.DS_Store' && $fichier  != 'index.php'){
+                if($fichier != '.' && $fichier != '..'&& $fichier != '.DS_Store' ){
                         //***** On place le nom du ficier dans un lien qui menne au fichier en question
                         echo '<p><a href="./compte/' . $fichier . '">' . $fichier . '</a></p>';  
                                                                                     } 
