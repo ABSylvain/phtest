@@ -9,16 +9,43 @@
         $yesno = $_POST['yesno'];
         $age = $_POST['age'];
         //***** Creer un fichier 'txt' avec speudo comme nom et dans une variable
-        $monfichier = fopen('compte/' . $_POST['speudo']. '.txt', 'w');
+        $monfichier = fopen('compte/' . $_POST['speudo']. '.php', 'w');
         //***** Colle les elements du formulaire
-        fputs($monfichier, $speudo);
-        fputs($monfichier, $message);
-        fputs($monfichier, $game);
-        fputs($monfichier, $case);
-        fputs($monfichier, $yesno);
-        fputs($monfichier, $age);
-        //***** on tente de creer un objet
-        //***** On referme le ficheier apres son utilisation
+        fputs($monfichier, '<form action=".php" method="POST">
+                                    <input type="text" name ="speudo" placeholder="'.$speudo.'" class="bar">
+                                    <input type="password" name="mot_de_passe" placeholder="Password" class="bar"/>
+                                    <input type="number" name="age" placeholder="'.$age.'" class="bar"/>
+                                    <textarea name="message" rows="5" cols="35" placeholder="'.$message.'" class="bar"></textarea>
+
+                                    <select name="game" class="point">
+                                        <option value=”” disabled selected>'.$game.'</option>
+                                        <option value="OverWatch">OverWatch</option>
+                                        <option value="LeagueOfLegend">LeagueOfLegend</option>
+                                        <option value="Hearthstone">HearthStone</option>
+                                        <option value="Diablo3">Diablo*RiP*</option>
+                                    </select>
+        
+                                    <input type="checkbox" name="case" class="point"/><label for="case">Clavier/Souris</label>
+                                    <input type="checkbox" name="case" class="point"/><label for="case">Manette</label>
+                                    <input type="checkbox" name="case" class="point"/><label for="case">Gestuel</label>
+                                    <input type="checkbox" name="case" class="point"/><label for="case">Tactil</label>
+       
+                                    <input type="radio" name="yesno" value="oui" id="oui" class="point"/><label for="oui">Oui</label>
+                                    <input type="radio" name="yesno" value="non" id="non" class="point"/><label for="non">Non</label>
+
+                                    <input type="submit" name="btn" value="Submit" class="point"></input>
+                                    <?php 
+                                        if(isset($_POST[\'mot_de_passe\']) && $_POST[\'mot_de_passe\'] ==  "bob"){
+                                                $monfichier = fopen(\'compte/\' . $_POST[\'speudo\']. \'.php\', \'w\');
+                                                
+                                            fclose($monfichier);
+                                            }else{
+                                                echo \'LOST\';
+                                                };
+                                    ?>
+                                    ');
+        
+        //***** On referme le fichier apres son utilisation
         fclose($monfichier);
     //***** Sinon password mauvais/pas rentrer message 'lost'
     }else{
