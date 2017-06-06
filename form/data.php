@@ -25,7 +25,7 @@
         $case = [];
         foreach ($_POST['case'] as $value)
             {
-              $case = $value;
+              $value = $case;
             }
         $yesno = $_POST['yesno'];
         $age = $_POST['age'];
