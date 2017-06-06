@@ -11,7 +11,7 @@
     <form action="data.php" method="POST">
         
         <input type="text" name ="speudo" placeholder="Speudo" class="bar">
-        <input type="password" name="mot_de_passe" placeholder="Password" class="bar"/>
+        <input type="password" name="mdp" placeholder="Password" class="bar"/>
         <input type="number" name="age" placeholder="Age" class="bar"/>
         <textarea name="message" rows="5" cols="35" placeholder="Saisie du paragraphe" class="bar"></textarea>
 
@@ -30,7 +30,7 @@
        
             <input type="radio" name="yesno" value="oui" id="oui" class="point"/><label for="oui">Oui</label>
             <input type="radio" name="yesno" value="non" id="non" class="point"/><label for="non">Non</label>
-
+        <input type="password" name="mot_de_passe" placeholder="Password" class="bar"/>
         <input type="submit" name="btn" value="Submit" class="point"></input>
 
     </form>

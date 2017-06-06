@@ -18,57 +18,25 @@
     //***** Pour le password
     if(isset($_POST['mot_de_passe']) && $_POST['mot_de_passe'] ==  "bob") {
         //***** On chope les elments du formulaire
-        $oldname = $_POST['oldname'];
-        $speudo = $_POST['speudo'];
-        $message = $_POST['message'];
-        $game = $_POST['game'];
-        $case = [];
-        $yesno = $_POST['yesno'];
-        $age = $_POST['age'];
+        $user = new class{};
+        $user->oldname = $_POST['oldname'];
+        $user->speudo = $_POST['speudo'];
+        $user->mdp = $_POST['mpd'];
+        $user->message = $_POST['message'];
+        $user->game = $_POST['game'];
+        $user->case = [];
+        $user->yesno = $_POST['yesno'];
+        $user->age = $_POST['age'];
 
         //***** Supp le fichier selectionner
-        if(is_file('compte/'. $oldname. '.php')){
-            unlink('compte/' . $oldname. '.php');
+        if(is_file('compte/'. $user->oldname. '.php')){
+            unlink('compte/' . $user->oldname. '.php');
         }
         //***** Creer un fichier 'txt' avec speudo comme nom et dans une variable
         $monfichier = fopen('compte/' . $_POST['speudo']. '.php', 'w');
         //***** Colle les elements du formulaire (copi/colle le formulaire d'origine 
         //***** avec les variable de recu du POST)
-        fputs($monfichier, '<link rel="stylesheet" type="text/css" href="../style.css" /> 
-                            <form action="../data.php" method="POST">
-                            <input type="hidden" name="oldname" value="'.$speudo.'">
-                                    <input type="text" name ="speudo" placeholder="'.$speudo.'" class="bar">
-                                    <input type="password" name="mot_de_passe" placeholder="Password" class="bar"/>
-                                    <input type="number" name="age" placeholder="'.$age.'" class="bar"/>
-                                    <textarea name="message" rows="5" cols="35" placeholder="'.$message.'" class="bar"></textarea>
-
-                                    <select name="game" class="point">
-                                        <option value=”” disabled selected>'.$game.'</option>
-                                        <option value="OverWatch">OverWatch</option>
-                                        <option value="LeagueOfLegend">LeagueOfLegend</option>
-                                        <option value="Hearthstone">HearthStone</option>
-                                        <option value="Diablo3">Diablo*RiP*</option>
-                                    </select>
-                                    
-                                    <input type="checkbox" name="case" class="point"/><label for="case">Clavier/Souris</label>
-                                    <input type="checkbox" name="case" class="point"/><label for="case">Manette</label>
-                                    <input type="checkbox" name="case" class="point"/><label for="case">Gestuel</label>
-                                    <input type="checkbox" name="case" class="point"/><label for="case">Tactil</label>
-       
-                                    <input type="radio" name="yesno" value="oui" id="oui" class="point"/><label for="oui">Oui</label>
-                                    <input type="radio" name="yesno" value="non" id="non" class="point"/><label for="non">Non</label>
-
-                                    <input type="submit" name="btn" value="Submit" class="point"></input>
-                                    <?php 
-                                        if(isset($_POST[\'mot_de_passe\']) && $_POST[\'mot_de_passe\'] ==  "bob"){
-                                                $monfichier = fopen(\'compte/\' . $_POST[\'speudo\']. \'.php\', \'w\');
-                                                
-                                            fclose($monfichier);
-                                            }else{
-                                                echo \'LOST\';
-                                                };
-                                    ?>
-                                    ');
+        fputs($monfichier, '');
         
         //***** On referme le fichier apres son utilisation
         fclose($monfichier);
